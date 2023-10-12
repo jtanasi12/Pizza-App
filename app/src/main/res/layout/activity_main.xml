@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="checkBoxClick"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pizzaTypeText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/choosePizzaSizeText"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaImage" />
+
+    <TextView
+        android:id="@+id/pizzaTypeText6"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/extraPizzaToppingsText"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupBox" />
+
+    <TextView
+        android:id="@+id/subTotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/subTotal_"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tomatoCheckBox" />
+
+    <TextView
+        android:id="@+id/tipTotalText"
+        android:layout_width="82dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Tip:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTotalText" />
+
+    <TextView
+        android:id="@+id/subTotalText3"
+        android:layout_width="152dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:text="Total Price: "
+        android:textColor="#7A1515"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTotalText5"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="91dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="132dp"
+        android:text="@string/fullPrice"
+        android:textColor="#7A1515"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchButton"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/subTotalText5"
+        android:layout_width="122dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Delivery Fee:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipTotalText" />
+
+    <TextView
+        android:id="@+id/pizzaTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pizzaTypeText"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoText" />
+
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/logoText"
+        android:textColor="#7A1515"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/pizzaTypeSpinner"
+        android:layout_width="380dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/pizza_type_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTypeText" />
+
+    <ImageView
+        android:id="@+id/pizzaImage"
+        android:layout_width="166dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/pizzaImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTypeSpinner"
+        app:srcCompat="@drawable/hawaiian" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupBox"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTypeText2">
+
+        <RadioButton
+            android:id="@+id/mediumSizeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="radioButtonClick"
+            android:text="@string/mediumPizzaSize" />
+
+        <RadioButton
+            android:id="@+id/largeSizeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="radioButtonClick"
+            android:text="@string/pizzaSizeLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/xlSizeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="radioButtonClick"
+            android:text="@string/pizzaSizeXL" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/tomatoCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:onClick="checkBoxClick"
+        android:text="Tomatoes"
+        app:layout_constraintEnd_toStartOf="@+id/mushroomCheckBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTypeText6" />
+
+    <CheckBox
+        android:id="@+id/mushroomCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkBoxClick"
+        android:text="Mushroom"
+        app:layout_constraintBottom_toBottomOf="@+id/tomatoCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/onionCheckBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tomatoCheckBox" />
+
+    <CheckBox
+        android:id="@+id/onionCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkBoxClick"
+        android:text="Onions"
+        app:layout_constraintBottom_toBottomOf="@+id/mushroomCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/spinachCheckBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mushroomCheckBox" />
+
+    <CheckBox
+        android:id="@+id/spinachCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkBoxClick"
+        android:text="Spinach"
+        app:layout_constraintBottom_toBottomOf="@+id/onionCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/onionCheckBox" />
+
+    <TextView
+        android:id="@+id/subTotalPrice1"
+        android:layout_width="138dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="96dp"
+        android:text="@string/subTotalPrice2"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onionCheckBox" />
+
+    <TextView
+        android:id="@+id/tipPrice"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/tipPrice1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarID"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tipTotalText"
+        app:layout_constraintTop_toBottomOf="@+id/onionCheckBox" />
+
+    <SeekBar
+        android:id="@+id/seekBarID"
+        android:layout_width="149dp"
+        android:layout_height="27dp"
+        android:min="0"
+        android:max="100"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTotalPrice1" />
+
+    <Switch
+        android:id="@+id/switchButton"
+        android:layout_width="101dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="136dp"
+        android:onClick="switchClick"
+        android:text="No, $0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipPrice" />
+
+    <TextView
+        android:id="@+id/seekBarLabel"
+        android:layout_width="49dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="44dp"
+        android:text="@string/seekBarText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinachCheckBox" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="116dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#7A1515"
+        android:onClick="completeButton"
+        android:text="Complete Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

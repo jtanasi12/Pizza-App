@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pizza_type_list">
+        <item>Barbeque</item>
+        <item>Hawaiian</item>
+        <item>Margherita</item>
+        <item>Pepperoni</item>
+    </string-array>
+</resources>
